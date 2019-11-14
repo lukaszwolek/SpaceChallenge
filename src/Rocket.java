@@ -5,9 +5,6 @@ public class Rocket implements SpaceShip {
     private int rocketWithCargoWeight;   //aktualna waga z towarem
     private int rocketMaxWeight;  //maksymalna waga z towarem
     private int weightOfItem;       //waga Itemu
-    //private double chanceOfLaunch;   //prawdopod. katastrofy przy starcie
-    //private double chanceOfLand;       //prawdopod. katastrofy przy lądowaniu
-
 
     public boolean launch () {
         return true;
@@ -39,10 +36,6 @@ public class Rocket implements SpaceShip {
         this.weightOfItem = item.Weight;
     }
     public int getWeightOfItem () { return weightOfItem; }
-    //public void setChanceOfLaunch (double chanceOfLaunch) {this.chanceOfLaunch = chanceOfLaunch;}
-    //public double getChanceOfLaunch () {return chanceOfLaunch;}
-    //public void setChanceOfLand (double chanceOfLand) {this.chanceOfLaunch = chanceOfLand;}
-    //public double getChanceOfLand () {return chanceOfLand;}
 
 
     public void setNewWeight (Item item) {
@@ -72,15 +65,12 @@ class U1 extends Rocket {
         setRocketWeight(10000);
         setRocketWithCargoWeight(10000);
         setRockedMaxWeight(18000);
-        //setChanceOfLaunch(0.05);//*((double)(getRocketWithCargoWeight() - getRocketWeight())/ (double)(getRocketMaxWeight() - getRocketWeight())));
-        //setChanceOfLand(0.01);//*((double)(getRocketWithCargoWeight() - getRocketWeight())/ (double)(getRocketMaxWeight() - getRocketWeight())));
+
     }
     @Override
     public boolean launch () {
         double randomNumber = Math.random();
-        //System.out.println("Szansa na eksplozje przy starcie: "+chanceOfLaunch*((double)(getRocketWithCargoWeight() - getRocketWeight())/ (double)(getRocketMaxWeight() - getRocketWeight())));
-        //System.out.println("Random: "+randomNumber);
-        //System.out.println("Waga towaru: "+(getRocketWithCargoWeight()-getRocketWeight()));
+
         if ((chanceOfLaunch*((double)(getRocketWithCargoWeight() - getRocketWeight())/ (double)(getRocketMaxWeight() - getRocketWeight()))) <= randomNumber) {
             return true;
         }  else  {
@@ -90,9 +80,7 @@ class U1 extends Rocket {
     @Override
     public boolean land () {
         double randomNumber = Math.random();
-        //System.out.println("Szansa na eksplozje przy ladowaniu: "+chanceOfLand*((double)(getRocketWithCargoWeight() - getRocketWeight())/ (double)(getRocketMaxWeight() - getRocketWeight())));
-        //System.out.println("Random: "+randomNumber);
-        //System.out.println("Waga towaru: "+(getRocketWithCargoWeight()-getRocketWeight()));
+
         if ((chanceOfLand*((double)(getRocketWithCargoWeight() - getRocketWeight())/ (double)(getRocketMaxWeight() - getRocketWeight()))) <= randomNumber) {
             return true;
         }  else  {
@@ -110,15 +98,12 @@ class U2 extends Rocket {
         setRocketWeight(18000);
         setRocketWithCargoWeight(18000);
         setRockedMaxWeight(29000);
-        //setChanceOfLaunch(0.04);//*((double)(getRocketWithCargoWeight() - getRocketWeight())/ (double)(getRocketMaxWeight() - getRocketWeight())));
-        //setChanceOfLand(0.08);//*((double)(getRocketWithCargoWeight() - getRocketWeight())/ (double)(getRocketMaxWeight() - getRocketWeight())));
+
     }
     @Override
     public boolean launch () {
         double randomNumber = Math.random();
-        //System.out.println("Szansa na eksplozje przy starcie: "+chanceOfLaunch*((double)(getRocketWithCargoWeight() - getRocketWeight())/ (double)(getRocketMaxWeight() - getRocketWeight())));
-        //System.out.println("Random: "+randomNumber);
-        //System.out.println("Waga towaru: "+(getRocketWithCargoWeight()-getRocketWeight()));
+
         if ((chanceOfLaunch*((double)(getRocketWithCargoWeight() - getRocketWeight())/ (double)(getRocketMaxWeight() - getRocketWeight()))) <= randomNumber) {
             return true;
         }  else  {
@@ -128,9 +113,7 @@ class U2 extends Rocket {
     @Override
     public boolean land () {
         double randomNumber = Math.random();
-        //System.out.println("Szansa na eksplozje przy ladowaniu: "+chanceOfLand*((double)(getRocketWithCargoWeight() - getRocketWeight())/ (double)(getRocketMaxWeight() - getRocketWeight())));
-        //System.out.println("Random: "+randomNumber);
-        //System.out.println("Waga towaru: "+(getRocketWithCargoWeight()-getRocketWeight()));
+
         if ((chanceOfLand*((double)(getRocketWithCargoWeight() - getRocketWeight())/ (double)(getRocketMaxWeight() - getRocketWeight()))) <= randomNumber) {
             return true;
         }  else  {
